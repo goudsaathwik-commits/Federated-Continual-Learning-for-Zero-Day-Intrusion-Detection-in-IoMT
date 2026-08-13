@@ -4,15 +4,23 @@ import json
 import numpy as np
 from flask import Flask, render_template_string, jsonify, request, send_from_directory
 
-sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+if BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
 
-from src.data.loader import EdgeIIoTLoader
-from src.zero_day.open_set_detector import EnergyBasedZeroDayDetector
+try:
+    from src.data.loader import EdgeIIoTLoader
+    from src.zero_day.open_set_detector import EnergyBasedZeroDayDetector
+except Exception as e:
+    print(f"Optional ML dependencies not loaded in serverless context: {e}")
+    EdgeIIoTLoader = None
+    EnergyBasedZeroDayDetector = None
 
-app = Flask(__name__, static_folder="results/figures")
+raw_metrics_path = os.path.join(BASE_DIR, "results", "raw")
+results_figures_path = os.path.join(BASE_DIR, "results", "figures")
+viva_file_path = os.path.join(BASE_DIR, "viva", "viva_questions.md")
 
-raw_metrics_path = "results/raw"
-results_figures_path = "results/figures"
+app = Flask(__name__, static_folder=results_figures_path)
 
 def load_metrics_data():
     metrics = {}
@@ -76,10 +84,9 @@ def index():
     figures = [f for f in os.listdir(results_figures_path) if f.endswith(".png")] if os.path.exists(results_figures_path) else []
     
     # Load viva questions summary
-    viva_path = "viva/viva_questions.md"
     viva_text = ""
-    if os.path.exists(viva_path):
-        with open(viva_path, "r", encoding="utf-8") as f:
+    if os.path.exists(viva_file_path):
+        with open(viva_file_path, "r", encoding="utf-8") as f:
             viva_text = f.read()
 
     return render_template_string(HTML_TEMPLATE, figures=figures, viva_text=viva_text[:3000])
