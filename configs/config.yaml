@@ -1,0 +1,17 @@
+system:
+  project_name: "Federated Continual Learning for Zero-Day Intrusion Detection in IoMT"
+  version: "1.0.0"
+  seed: 42
+  device: "cpu" # "cuda" if GPU is available
+  log_level: "INFO"
+
+paths:
+  data_dir: "data"
+  models_dir: "models"
+  results_dir: "results"
+  configs_dir: "configs"
+  reports_dir: "reports"
+
+reproducibility:
+  deterministic: true
+  benchmark: false

@@ -1,0 +1,35 @@
+experiments:
+  E1_centralized:
+    enabled: true
+    description: "Centralized IDS trained on pooled hospital data"
+  E2_local:
+    enabled: true
+    description: "Independent local IDS trained per hospital client"
+  E3_fedavg:
+    enabled: true
+    description: "Standard FedAvg federated learning across 5 clients"
+  E4_continual:
+    enabled: true
+    description: "Centralized Continual Learning across sequential attack tasks"
+  E5_federated_continual:
+    enabled: true
+    description: "Federated Continual Learning across non-IID clients and tasks"
+  E6_zero_day:
+    enabled: true
+    description: "Zero-Day open-set detection evaluation on withheld attacks"
+  E7_proposed:
+    enabled: true
+    description: "Proposed unified FCL + Open-Set Zero-Day IDS framework"
+
+evaluation:
+  metrics:
+    - "accuracy"
+    - "precision"
+    - "recall"
+    - "f1_macro"
+    - "f1_weighted"
+    - "roc_auc"
+    - "fpr95"
+    - "zero_day_detection_rate"
+    - "backward_transfer"
+    - "average_accuracy"

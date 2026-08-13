@@ -1,0 +1,27 @@
+{
+  "audit_timestamp": "2026-08-12",
+  "data_leakage_status": "PASSED_CLEAN",
+  "leakage_detected": false,
+  "disjointness_checks": {
+    "train_val_overlap_count": 0,
+    "train_test_overlap_count": 0,
+    "val_test_overlap_count": 0,
+    "train_zeroday_overlap_count": 0,
+    "is_disjoint": true
+  },
+  "preprocessor_fitting_audit": {
+    "fitted_strictly_on_train": true,
+    "train_sample_count_used_for_fit": 6519,
+    "scaler_features_count": 46
+  },
+  "zero_day_isolation_audit": {
+    "withheld_classes": [
+      "Ransomware",
+      "Backdoor"
+    ],
+    "present_in_train": false,
+    "present_in_val": false,
+    "present_in_test": false,
+    "is_completely_isolated": true
+  }
+}

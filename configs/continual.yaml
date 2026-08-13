@@ -1,0 +1,8 @@
+continual:
+  num_tasks: 3
+  strategy: "replay" # "replay", "ewc", or "naive"
+  replay_buffer_size: 500
+  ewc_lambda: 0.4
+  learning_rate: 0.001
+  epochs_per_task: 5
+  batch_size: 64

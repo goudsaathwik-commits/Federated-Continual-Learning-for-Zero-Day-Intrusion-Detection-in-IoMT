@@ -1,0 +1,2 @@
+Method,Average_Accuracy,Backward_Transfer_BWT,Task1_Final_Acc,Task2_Final_Acc,Task3_Final_Acc,Zero_Day_ROC_AUC_Final,Zero_Day_Precision_Final
+Proposed FL + CL + Open-Set Zero-Day IDS,0.2722,-0.0874,0.0077,0.7992,0.0097,0.5415,0.8308

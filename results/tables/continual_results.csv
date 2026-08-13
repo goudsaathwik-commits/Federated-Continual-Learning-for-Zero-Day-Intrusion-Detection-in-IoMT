@@ -1,0 +1,3 @@
+Strategy,Average_Accuracy,Backward_Transfer_BWT,Average_Forgetting,Task1_Final_Acc,Task2_Final_Acc,Task3_Final_Acc
+Sequential Fine-Tuning (Naive),0.2671,-0.1655,0.1655,0.0463,0.6969,0.058
+Experience Replay,0.2494,-0.1713,0.1713,0.0232,0.7008,0.0242

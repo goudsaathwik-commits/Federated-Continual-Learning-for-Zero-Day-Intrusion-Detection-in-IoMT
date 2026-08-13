@@ -1,0 +1,27 @@
+{
+  "A1_Centralized": {
+    "accuracy": 0.0694,
+    "bwt": 0.0,
+    "zero_day_auc": "N/A"
+  },
+  "A2_FedAvg_No_CL": {
+    "accuracy": 0.5951,
+    "bwt": 0.0,
+    "zero_day_auc": "N/A"
+  },
+  "A3_CL_No_FL": {
+    "accuracy": 0.2542,
+    "bwt": -0.1554,
+    "zero_day_auc": "N/A"
+  },
+  "A4_FL_CL_No_Replay": {
+    "accuracy": 0.268,
+    "bwt": -0.083,
+    "zero_day_auc": 0.4832
+  },
+  "A5_FL_CL_With_Replay": {
+    "accuracy": 0.2703,
+    "bwt": -0.0999,
+    "zero_day_auc": 0.4916
+  }
+}

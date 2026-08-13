@@ -1,0 +1,22 @@
+dataset:
+  name: "Edge-IIoTset" # Selected primary IoT benchmark for IoMT hospital network simulation
+  raw_path: "data/raw"
+  processed_path: "data/processed"
+  val_split: 0.15
+  test_split: 0.15
+  random_state: 42
+  features_to_drop:
+    - "Flow ID"
+    - "Source IP"
+    - "Source Port"
+    - "Destination IP"
+    - "Destination Port"
+    - "Timestamp"
+  target_column: "Label"
+  normal_label: "BENIGN"
+
+zero_day:
+  withheld_classes:
+    - "Bot"
+    - "Heartbleed"
+  leakage_check: true

@@ -1,0 +1,94 @@
+{
+  "proposed_R_matrix": [
+    [
+      0.1776061776061776,
+      0.013513513513513514,
+      0.06280193236714976
+    ],
+    [
+      0.003861003861003861,
+      0.8040540540540541,
+      0.004830917874396135
+    ],
+    [
+      0.007722007722007722,
+      0.7992277992277992,
+      0.00966183574879227
+    ]
+  ],
+  "average_accuracy": 0.2722,
+  "backward_transfer_bwt": -0.0874,
+  "final_task_accuracies": [
+    0.0077,
+    0.7992,
+    0.0097
+  ],
+  "zero_day_evaluations_per_task": [
+    {
+      "threshold_tau": -2.3406310081481934,
+      "zero_day_precision": 0.7969,
+      "zero_day_recall": 0.0745,
+      "zero_day_f1": 0.1362,
+      "false_positive_rate": 0.0502,
+      "false_negative_rate": 0.9255,
+      "roc_auc": 0.5278,
+      "pr_auc": 0.7478,
+      "confusion_matrix": [
+        [
+          246,
+          13
+        ],
+        [
+          634,
+          51
+        ]
+      ],
+      "known_test_samples": 259,
+      "zero_day_test_samples": 685
+    },
+    {
+      "threshold_tau": -1.6298530101776123,
+      "zero_day_precision": 0.358,
+      "zero_day_recall": 0.0423,
+      "zero_day_f1": 0.0757,
+      "false_positive_rate": 0.0502,
+      "false_negative_rate": 0.9577,
+      "roc_auc": 0.5102,
+      "pr_auc": 0.3971,
+      "confusion_matrix": [
+        [
+          984,
+          52
+        ],
+        [
+          656,
+          29
+        ]
+      ],
+      "known_test_samples": 1036,
+      "zero_day_test_samples": 685
+    },
+    {
+      "threshold_tau": -1.3355633020401,
+      "zero_day_precision": 0.8308,
+      "zero_day_recall": 0.0788,
+      "zero_day_f1": 0.144,
+      "false_positive_rate": 0.0531,
+      "false_negative_rate": 0.9212,
+      "roc_auc": 0.5415,
+      "pr_auc": 0.7897,
+      "confusion_matrix": [
+        [
+          196,
+          11
+        ],
+        [
+          631,
+          54
+        ]
+      ],
+      "known_test_samples": 207,
+      "zero_day_test_samples": 685
+    }
+  ]
+}

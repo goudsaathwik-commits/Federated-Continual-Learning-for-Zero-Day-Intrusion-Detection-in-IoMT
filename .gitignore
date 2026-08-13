@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Data & Models (ignore raw large datasets & dynamic binary outputs)
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/clients/*
+!data/clients/.gitkeep
+
+models/centralized/*
+!models/centralized/.gitkeep
+models/federated/*
+!models/federated/.gitkeep
+models/continual/*
+!models/continual/.gitkeep
+models/proposed/*
+!models/proposed/.gitkeep
+
+# Pytest / Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+results/logs/*
+!results/logs/.gitkeep

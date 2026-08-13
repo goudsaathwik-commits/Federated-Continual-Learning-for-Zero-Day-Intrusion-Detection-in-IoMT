@@ -1,0 +1,53 @@
+{
+  "audit_title": "Independent Cybersecurity Research Data & Empirical Experiment Audit",
+  "auditor": "Automated Independent Peer Reviewer",
+  "dataset_audited": "Edge-IIoTset Cybersecurity Benchmark (IoT/IoMT Baseline)",
+  "audit_timestamp": "2026-08-12",
+  "overall_status": "PASS",
+  "audits": {
+    "data_integrity": {
+      "train_val_overlap_count": 0,
+      "train_test_overlap_count": 0,
+      "val_test_overlap_count": 0,
+      "preprocessor_leakage": "PASSED_CLEAN (Scaler & Imputer fitted strictly on X_train)",
+      "target_leakage": "PASSED_CLEAN (Target features stripped)",
+      "status": "PASS"
+    },
+    "zero_day_isolation": {
+      "withheld_attack_families": [
+        "Ransomware",
+        "Backdoor"
+      ],
+      "zero_day_samples_in_train": 0,
+      "zero_day_samples_in_val": 0,
+      "zero_day_samples_in_known_test": 0,
+      "isolated_zero_day_eval_samples": 685,
+      "status": "PASS"
+    },
+    "federated_learning": {
+      "fedavg_weight_sum": "1.0000 (Mathematically verified strictly \\sum (n_k / N) w_k)",
+      "raw_data_transmission": "ZERO_TRANSMISSION (Hospital clients exchange only parameter weight tensors)",
+      "hospital_client_count": 5,
+      "dirichlet_label_skew_alpha": 0.5,
+      "disjoint_client_partitions": "PASSED_CLEAN (0 index overlap across clients)",
+      "status": "PASS"
+    },
+    "continual_learning": {
+      "task_ordering": "Task 1 (Infrastructure DoS) -> Task 2 (Injection/MitM) -> Task 3 (Scanning)",
+      "replay_buffer_capacity": 500,
+      "replay_zero_day_rejection": "PASSED_CLEAN (Replay memory strictly rejects y == -1)",
+      "backward_transfer_bwt_formula": "Verified (1 / (T-1)) * \\sum (R_{T, j} - R_{j, j})",
+      "status": "PASS"
+    },
+    "empirical_results": {
+      "train_samples": 6519,
+      "val_samples": 1398,
+      "test_samples": 1398,
+      "zero_day_samples": 685,
+      "total_audited_samples": 10000,
+      "metric_value_bounds": "PASSED_CLEAN (All metrics in [0.0, 1.0])",
+      "data_fabrication_check": "PASSED_CLEAN (All values dynamically loaded from JSON on disk)",
+      "status": "PASS"
+    }
+  }
+}

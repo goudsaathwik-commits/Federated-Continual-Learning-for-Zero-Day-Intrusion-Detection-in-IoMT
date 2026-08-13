@@ -1,0 +1,7 @@
+Experiment_ID,Model_Description,Accuracy,F1_Macro,F1_Weighted,BWT,Zero_Day_ROC_AUC,Comm_MB
+E1,Centralized Tabular MLP IDS,0.5951359084406295,0.06218236173393124,0.444083476074084,N/A (Static),N/A (Closed-Set),0.0 MB
+E2,Local Hospital IDS (Mean 5 Clients),0.4185,0.0578,0.3572,N/A (Static),N/A (Closed-Set),0.0 MB
+E3,Standard FedAvg (5 Hospitals),0.5929899856938483,0.062041610537344714,0.4430782829791485,N/A (Static),N/A (Closed-Set),21.03 MB
+E4,Centralized Continual Learning (Replay),0.2494,N/A,N/A,-0.1713,N/A (Closed-Set),0.0 MB
+E6,Zero-Day Energy Anomaly Detector,N/A (OOD),0.09,N/A,N/A,0.5157,0.0 MB
+E7 (Proposed),Proposed FL + CL + Zero-Day IDS,0.2722,N/A,N/A,-0.0874,0.5415,12.62 MB

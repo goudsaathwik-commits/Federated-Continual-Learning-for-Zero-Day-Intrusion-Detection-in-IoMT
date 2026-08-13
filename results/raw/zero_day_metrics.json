@@ -1,0 +1,22 @@
+{
+  "threshold_tau": -2.1266613006591797,
+  "zero_day_precision": 0.313,
+  "zero_day_recall": 0.0526,
+  "zero_day_f1": 0.09,
+  "false_positive_rate": 0.0565,
+  "false_negative_rate": 0.9474,
+  "roc_auc": 0.5157,
+  "pr_auc": 0.3297,
+  "confusion_matrix": [
+    [
+      1319,
+      79
+    ],
+    [
+      649,
+      36
+    ]
+  ],
+  "known_test_samples": 1398,
+  "zero_day_test_samples": 685
+}

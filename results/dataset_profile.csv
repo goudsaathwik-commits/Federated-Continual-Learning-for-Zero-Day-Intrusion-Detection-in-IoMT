@@ -1,0 +1,15 @@
+Attack_Category,Sample_Count,Percentage
+Normal,5547,55.47
+DDoS_HTTP,397,3.9699999999999998
+Ransomware,356,3.56
+SQL_injection,353,3.53
+Uploading_attack,351,3.51
+XSS,347,3.47
+ARP_spoofing,343,3.4299999999999997
+DDoS_TCP,341,3.4099999999999997
+Vulnerability_scanner,335,3.35
+DNS_spoofing,332,3.32
+Backdoor,329,3.29
+DDoS_UDP,325,3.25
+DDoS_ICMP,324,3.2399999999999998
+Port_Scanning,320,3.2

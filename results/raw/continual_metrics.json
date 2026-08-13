@@ -1,0 +1,58 @@
+{
+  "naive_fine_tuning": {
+    "strategy": "Sequential Fine-Tuning (Naive)",
+    "R_matrix": [
+      [
+        0.2702702702702703,
+        0.015444015444015444,
+        0.07729468599033816
+      ],
+      [
+        0.0,
+        0.8040540540540541,
+        0.0
+      ],
+      [
+        0.04633204633204633,
+        0.696911196911197,
+        0.057971014492753624
+      ]
+    ],
+    "average_accuracy": 0.2671,
+    "backward_transfer": -0.1655,
+    "average_forgetting": 0.1655,
+    "final_task_accuracies": [
+      0.0463,
+      0.6969,
+      0.058
+    ]
+  },
+  "experience_replay": {
+    "strategy": "Experience Replay",
+    "R_matrix": [
+      [
+        0.2702702702702703,
+        0.015444015444015444,
+        0.07729468599033816
+      ],
+      [
+        0.0,
+        0.7963320463320464,
+        0.0
+      ],
+      [
+        0.023166023166023165,
+        0.7007722007722008,
+        0.024154589371980676
+      ]
+    ],
+    "average_accuracy": 0.2494,
+    "backward_transfer": -0.1713,
+    "average_forgetting": 0.1713,
+    "final_task_accuracies": [
+      0.0232,
+      0.7008,
+      0.0242
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+Ablation_Variant,Accuracy,Backward_Transfer_BWT,Zero_Day_ROC_AUC
+A1_Centralized,0.0694,0.0,N/A
+A2_FedAvg_No_CL,0.5951,0.0,N/A
+A3_CL_No_FL,0.2542,-0.1554,N/A
+A4_FL_CL_No_Replay,0.268,-0.083,0.4832
+A5_FL_CL_With_Replay,0.2703,-0.0999,0.4916

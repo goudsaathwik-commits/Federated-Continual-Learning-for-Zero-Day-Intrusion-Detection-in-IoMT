@@ -1,0 +1,2 @@
+Method,Threshold_Tau,Zero_Day_Precision,Zero_Day_Recall,Zero_Day_F1,False_Positive_Rate,False_Negative_Rate,ROC_AUC,PR_AUC
+Energy-Based Scoring,-2.1266613006591797,0.313,0.0526,0.09,0.0565,0.9474,0.5157,0.3297
