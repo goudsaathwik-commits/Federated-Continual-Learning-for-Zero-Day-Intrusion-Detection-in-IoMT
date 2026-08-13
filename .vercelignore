@@ -1,0 +1,8 @@
+data/
+models/
+presentation/*.pptx
+tests/
+.pytest_cache/
+.git/
+requirements-ml.txt
+environment.yml
