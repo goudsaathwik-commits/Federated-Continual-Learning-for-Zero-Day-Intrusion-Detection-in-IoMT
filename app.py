@@ -20,7 +20,19 @@ raw_metrics_path = os.path.join(BASE_DIR, "results", "raw")
 results_figures_path = os.path.join(BASE_DIR, "results", "figures")
 viva_file_path = os.path.join(BASE_DIR, "viva", "viva_questions.md")
 
+class VercelPathFixMiddleware:
+    def __init__(self, app):
+        self.app = app
+    def __call__(self, environ, start_response):
+        path = environ.get('PATH_INFO', '')
+        if path.startswith('/api/index.py'):
+            environ['PATH_INFO'] = path[13:] or '/'
+        elif path.startswith('/api/index'):
+            environ['PATH_INFO'] = path[10:] or '/'
+        return self.app(environ, start_response)
+
 app = Flask(__name__, static_folder=results_figures_path)
+app.wsgi_app = VercelPathFixMiddleware(app.wsgi_app)
 
 def load_metrics_data():
     metrics = {}
@@ -80,6 +92,8 @@ def predict_anomaly_api():
     })
 
 @app.route("/")
+@app.route("/api/index")
+@app.route("/api/index.py")
 def index():
     figures = [f for f in os.listdir(results_figures_path) if f.endswith(".png")] if os.path.exists(results_figures_path) else []
     
